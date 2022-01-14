@@ -1,13 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
-function Statistics({
-  total = 0,
-  positiveFeedbackPercentage = 0,
-  good,
-  bad,
-  neutral,
-}) {
+const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
   return (
     <div>
       <ul className={css.statList}>
@@ -23,10 +17,10 @@ function Statistics({
       </ul>
 
       <p>Total: {total}</p>
-      <p>Positive feedback: {positiveFeedbackPercentage}%</p>
+      <p>Positive feedback: {positivePercentage}%</p>
     </div>
   );
-}
+};
 
 Statistics.propTypes = {
   options: PropTypes.object,

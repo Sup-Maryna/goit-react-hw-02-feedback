@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
-function FeedbackOptions({ options, onLeaveFeedback }) {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className={css.btnWrap}>
       {options.map((option, index) => (
@@ -11,7 +11,7 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
       ))}
     </div>
   );
-}
+};
 
 FeedbackOptions.propTypes = {
   options: PropTypes.array.isRequired,
