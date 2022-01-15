@@ -21,10 +21,9 @@ export default class App extends Component {
     const { good } = this.state;
     return Math.round((good * 100) / total);
   };
-  setFeedback = e => {
-    const name = e.target.name;
+  setFeedback = feedback => {
     this.setState(prevState => ({
-      [name]: prevState[name] + 1,
+      [feedback]: prevState[feedback] + 1,
     }));
   };
   render() {
